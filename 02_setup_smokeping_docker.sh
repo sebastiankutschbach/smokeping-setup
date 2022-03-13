@@ -7,11 +7,11 @@ wget -O speedtest.pm https://raw.githubusercontent.com/mad-ady/smokeping-speedte
 wget -O speedtestcli.pm https://raw.githubusercontent.com/mad-ady/smokeping-speedtest/master/speedtestcli.pm
 
 # make smoke ping directories
-mkdir -p /home/pi/smokeping/config
-mkdir -p /home/pi/smokeping/data
+mkdir -p /home/dlp0mts/smokeping/config
+mkdir -p /home/dlp0mts/smokeping/data
 
-cp Targets /home/pi/smokeping/config
-cp Probes /home/pi/smokeping/config
+cp Targets /home/dlp0mts/smokeping/config
+cp Probes /home/dlp0mts/smokeping/config
 
 # start the smokeping container
 docker run \
@@ -21,8 +21,8 @@ docker run \
   -e PGID=1000 \
   -e TZ=Asia/Shanghai \
   -p 80:80 \
-  -v /home/pi/smokeping/config:/config \
-  -v /home/pi/smokeping/data:/data \
+  -v /home/dlp0mts/smokeping/config:/config \
+  -v /home/dlp0mts/smokeping/data:/data \
   --restart unless-stopped \
   linuxserver/smokeping
 

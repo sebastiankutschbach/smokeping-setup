@@ -1,0 +1,29 @@
+*** Probes ***
+
++ FPing
+
+binary = /usr/sbin/fping
+
++ FPing6
+
+binary = /usr/sbin/fping
+protocol = 6
+
++ DNS
+binary = /usr/bin/dig
+lookup = google.com
+pings = 5
+step = 300
++ speedtest
+binary = /usr/bin/speedtest
+timeout = 300
+forks = 1
+step = 3600
+offset = random
+pings = 3
+
+++ speedtest-download
+measurement = download
+
+++ speedtest-upload
+measurement = upload
